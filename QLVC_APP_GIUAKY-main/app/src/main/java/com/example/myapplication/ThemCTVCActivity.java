@@ -36,7 +36,6 @@ public class ThemCTVCActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_them_ctvc);
 
-
         EditText edtSoLuong = findViewById(R.id.edtSoLuong);
         EditText edtCuLy = findViewById(R.id.edtCuLy);
 
@@ -45,6 +44,7 @@ public class ThemCTVCActivity extends AppCompatActivity {
         Spinner VTspinner = findViewById(R.id.spnVT);
         btnReturn6 = findViewById(R.id.btnReturn6);
 
+        //Spinner danh sách phiếu vận chuyển
         ArrayList<PhieuVanChuyen> dsPVC= new ArrayList<PhieuVanChuyen>();
         Cursor dt= DBhelper.GetData("select * from PVC");
         while (dt.moveToNext()){
@@ -55,6 +55,7 @@ public class ThemCTVCActivity extends AppCompatActivity {
         ArrayAdapter spinnerAdapterPVC = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, dsPVC);
         PVCspinner.setAdapter(spinnerAdapterPVC);
 
+        //Spinner danh sách vật tư
         ArrayList<VatTu> dsVT= new ArrayList<VatTu>();
         Cursor dh= DBhelper.GetData("select * from vattu");
         while (dh.moveToNext()){
@@ -78,7 +79,7 @@ public class ThemCTVCActivity extends AppCompatActivity {
         VTspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                selected_positionVT= position;
+                selected_positionVT = position;
             }
 
             @Override
@@ -104,9 +105,8 @@ public class ThemCTVCActivity extends AppCompatActivity {
                 }
 
                 if(flagValid) {
-
                     try {
-                        DBhelper.QueryData("insert into chitietPVC values('" + dsPVC.get(selected_positionPVC).getMaPVC() + "','" + dsVT.get(selected_positionPVC).getMaVt() +"','" + Integer.parseInt(edtSoLuong.getText().toString()) + "','" + Integer.parseInt(edtCuLy.getText().toString()) + "')");
+                        DBhelper.QueryData("insert into chitietPVC values('" + dsPVC.get(selected_positionPVC).getMaPVC() + "','" + dsVT.get(selected_positionVT).getMaVt() +"','" + Integer.parseInt(edtSoLuong.getText().toString()) + "','" + Integer.parseInt(edtCuLy.getText().toString()) + "')");
                         Toast.makeText(getApplicationContext(), "Thêm thành công!", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(ThemCTVCActivity.this, ChiTietPVCActivity.class);
                         startActivity(intent);

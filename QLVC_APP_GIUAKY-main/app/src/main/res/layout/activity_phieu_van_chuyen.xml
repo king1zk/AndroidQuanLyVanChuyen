@@ -7,7 +7,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:orientation="vertical">
 
         <ImageView
@@ -52,7 +52,8 @@
                 android:id="@+id/listPVC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center">
+                android:layout_marginRight="40dp"
+                android:gravity="left">
 
                 <TextView
                     android:id="@+id/txtMaPVC"
@@ -61,7 +62,7 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:text="Ma PVC"
-                    android:textAlignment="textStart" />
+                    android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/txtMACT"
@@ -70,7 +71,7 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:text="@string/MaCT"
-                    android:textAlignment="textEnd" />
+                    android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/txtNgayVC"

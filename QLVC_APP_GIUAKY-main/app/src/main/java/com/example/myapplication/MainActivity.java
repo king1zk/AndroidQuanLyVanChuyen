@@ -17,21 +17,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
-        Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up);
-        Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_down);
-        Animation animation3 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoom_in);
-        Animation animation4 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blink);
         cardViewQLVT = findViewById(R.id.cv_qlvt);
-        cardViewQLVT.startAnimation(animation);
         cardViewQLCT = findViewById(R.id.cv_qlct);
-        cardViewQLCT.startAnimation(animation);
         cardViewChuyenVT = findViewById(R.id.cv_chuyenVT);
-        cardViewChuyenVT.startAnimation(animation);
         cardViewCTVC = findViewById(R.id.cv_qlchitiet);
-        cardViewCTVC.startAnimation(animation);
         cardViewThongKe = findViewById(R.id.cv_thongke);
-        cardViewThongKe.startAnimation(animation4);
 
         cardViewQLVT.setOnClickListener(view -> {
             startActivity(new Intent(this, DSVatTuActivity.class));
@@ -67,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         DBhelper.QueryData("create table if not exists vattu(maVT integer primary key Autoincrement,tenVT nvarchar(100),dvTinh nvarchar(30),giaVC float,hinh Blob)");
         DBhelper.QueryData("create table if not exists congtrinh( maCT nvarchar(30) primary key,tenCT nvarchar(50), diachi nvarchar(100))");
         DBhelper.QueryData("create table if not exists PVC(maPVC nchar(10) primary key, ngayVC date, maCT varchar(30),TT nvarchar(50), FOREIGN KEY(maCT) REFERENCES congtrinh(maCT) )");
-        DBhelper.QueryData("create table if not exists chitietPVC( maPVC nchar(10), maVT int, soluong int, culy int,PRIMARY KEY (maPVC, maVT) FOREIGN KEY(maPVC) REFERENCES PVC(maPVC),  FOREIGN KEY (maVT) REFERENCES vattu(maVT))");
+        DBhelper.QueryData("create table if not exists chitietPVC( maPVC nchar(10), maVT int, soluong int, culy int,PRIMARY KEY (maPVC, maVT), FOREIGN KEY(maPVC) REFERENCES PVC(maPVC),  FOREIGN KEY (maVT) REFERENCES vattu(maVT))");
 //        DBhelper.QueryData("create table if not exists TrangThai(maTT integer primary key Autoincrement,thongTin nvarchar(50)");
     }
 }

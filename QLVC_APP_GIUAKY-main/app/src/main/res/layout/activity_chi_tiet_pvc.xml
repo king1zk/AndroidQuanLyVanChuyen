@@ -36,7 +36,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right">
-
             <ImageButton
                 android:id="@+id/imgbtn_addctvc"
                 android:layout_width="wrap_content"
@@ -46,40 +45,47 @@
                 android:backgroundTint="#FFFFFF"
                 android:foregroundTint="#FFFFFF"
                 android:src="@android:drawable/ic_input_add" />
+            <ImageButton
+                android:id="@+id/imgbtn_scanPdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:backgroundTint="#FFFFFF"
+                android:foregroundTint="#FFFFFF"
+                android:src="@drawable/ic_baseline_adf_scanner_24"/>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/listCTVC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
+            android:gravity="start"
+            android:orientation="horizontal">
             <TextView
                 android:id="@+id/txtMaPVC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:padding="10dp"
                 android:text="Mã Phiếu VC"
-                android:textAlignment="textStart" />
+                android:textAlignment="center" />
             <TextView
                 android:id="@+id/txmaVT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:text="@string/maVT"
-                android:textAlignment="textEnd" />
+                android:textAlignment="center" />
             <TextView
                 android:id="@+id/txtSoLuong"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:text="@string/SL"
-                android:textAlignment="textEnd" />
+                android:textAlignment="center" />
 
 
             <TextView
-                android:id="@+id/txtNgayVC"
+                android:id="@+id/txtCuly"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
@@ -88,7 +94,6 @@
 
 
         </LinearLayout>
-
         <ListView
             android:id="@+id/lvCTVC"
             android:layout_width="match_parent"
@@ -96,7 +101,6 @@
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:paddingBottom="10dp" />
-
     </LinearLayout>
     </LinearLayout>
 

@@ -17,27 +17,35 @@
             android:id="@+id/tvMaPVC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_margin="10dp"
+            android:textAlignment="center"
             tool:text="MaPCV" />
+        <TextView
+            android:id="@+id/tvMaCT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:textAlignment="center"
+            tool:text="MACT" />
 
         <TextView
             android:id="@+id/tvNgayVc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_margin="10dp"
+            android:textAlignment="center"
             tool:text="Ngày VC" />
 
-        <TextView
-            android:id="@+id/tvMaCT"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            tool:text="MACT" />
         <TextView
             android:id="@+id/tvTT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_margin="10dp"
+            android:textAlignment="center"
             tool:text="TT" />
     </LinearLayout>
 

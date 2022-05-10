@@ -57,9 +57,6 @@ public class ThemPVCActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 selected_position = position;
-                //đối số postion là vị trí phần tử trong list Data
-//                String msg = "position :" + position + " value :" + dsgiangvien.get(position);
-//                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -98,7 +95,7 @@ public class ThemPVCActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Ngày giao phải lớn hơn ngày hiện tại", Toast.LENGTH_SHORT).show();
                         } else {
                             try {
-                                DBhelper.QueryData("insert into PVC values('" + MaPVC + "','" + dsCT.get(selected_position).getTenCT() + "','" + ngaychon + "','" +TT+ "')");
+                                DBhelper.QueryData("insert into PVC values('" + MaPVC + "','" + ngaychon + "','" + dsCT.get(selected_position).getMaCT() + "','" +TT+ "')");
                                 Toast.makeText(getApplicationContext(), "Thêm thành công!", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(ThemPVCActivity.this, PhieuVanChuyenActivity.class);
                                 startActivity(intent);

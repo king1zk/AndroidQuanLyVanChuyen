@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,7 +50,6 @@ public class CustomAdapter_CTVC extends BaseAdapter {
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 try {
                     DBhelper.deleteCTVC(arrayList.get(position));
                 } catch (Exception ex) {

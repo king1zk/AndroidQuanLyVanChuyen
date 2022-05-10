@@ -35,7 +35,7 @@ public class CustomSpinerAdapterVT extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        DBhelper= new DBHelper(parent.getContext(),"qlvc.sqlite",null,1);
+        DBhelper = new DBHelper(parent.getContext(),"qlvc.sqlite",null,1);
         View viewitem= View.inflate(parent.getContext(), R.layout.dong_xem_vat_tu,null);
         VatTu VT= (VatTu) getItem(position);
         TextView tvTenVT =(TextView) viewitem.findViewById(R.id.tvXemTenSP);
@@ -45,7 +45,6 @@ public class CustomSpinerAdapterVT extends BaseAdapter {
         ImageView tvHinh =(ImageView) viewitem.findViewById(R.id.ivXemHinhSP);
         Bitmap bitmap= BitmapFactory.decodeByteArray(VT.getHinh(), 0, VT.getHinh().length);
         tvHinh.setImageBitmap(bitmap);
-
         return viewitem;
     }
 }

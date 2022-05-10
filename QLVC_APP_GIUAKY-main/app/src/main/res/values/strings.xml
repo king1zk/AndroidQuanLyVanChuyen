@@ -7,10 +7,10 @@
     <string name="DVTinh">ĐV tính</string>
     <string name="DSVT">DANH SÁCH VẬT TƯ</string>
     <string name="DSCT">DANH SÁCH CÔNG TRÌNH</string>
-    <string name="MaCT">Mã Công Trình</string>
+    <string name="MaCT">Mã CT</string>
     <string name="TenCT">Tên Công Trình</string>
     <string name="DiaChi">Địa Chỉ</string>
-    <string name="MaPVC">Mã Phiếu Vận Chuyển</string>
+    <string name="MaPVC">Mã PVC</string>
     <string name="ngayVC">Ngày Vận Chuyển</string>
     <string name="DSPVC">DANH SÁCH PHIẾU VẬN CHUYỂN</string>
     <string name="CTPVC">CHI TIẾT PHIẾU VẬN CHUYỂN</string>
