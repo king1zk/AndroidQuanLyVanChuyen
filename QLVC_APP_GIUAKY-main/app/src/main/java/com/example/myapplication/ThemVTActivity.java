@@ -26,7 +26,7 @@ public class ThemVTActivity extends AppCompatActivity {
     ImageView ivHinh;
     EditText edtTenVT, edtGiaVC, edtDVTinh;
     Button btnTaoVT;
-    ImageView btnReturn8;
+    //ImageView btnReturn8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,12 +103,6 @@ public class ThemVTActivity extends AppCompatActivity {
                 }
             }
         });
-        btnReturn8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ThemVTActivity.this, MainActivity.class));
-            }
-        });
     }
 
     private void create() {
@@ -117,7 +111,7 @@ public class ThemVTActivity extends AppCompatActivity {
         edtDVTinh = findViewById(R.id.edtDVTinh);
         ivHinh = findViewById(R.id.imageView);
         btnTaoVT = findViewById(R.id.btnTaoVT);
-        btnReturn8 = findViewById(R.id.btnReturn8);
+       // btnReturn8 = findViewById(R.id.btnReturn8);
     }
     @Override
     public boolean onCreatePanelMenu(int featureId, @NonNull Menu menu) {

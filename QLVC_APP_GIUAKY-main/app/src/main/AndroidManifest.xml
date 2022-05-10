@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".SuaPVCActivity"></activity>
+<!--        <activity android:name=".SuaPVCActivity"></activity>-->
         <activity android:name=".SuaVTActivity"></activity>
         <activity android:name=".SuaCTVCActivity"></activity>
         <activity android:name=".SuaCongTrinhActivity"></activity>
@@ -17,7 +17,7 @@
         <activity android:name=".ThemVTActivity" />
         <activity android:name=".ThemPVCActivity" />
         <activity android:name=".ThemCTVCActivity" />
-        <activity android:name=".ThongKeActivity" />
+        <activity android:name=".MPLineChart" />
         <activity android:name=".ChiTietPVCActivity" />
         <activity android:name=".PhieuVanChuyenActivity" />
         <activity android:name=".DSVatTuActivity" />

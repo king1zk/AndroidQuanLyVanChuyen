@@ -11,17 +11,11 @@
         android:backgroundTint="#FFFFFF"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/btnReturn6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_menu_revert" />
-
         <TextView
             android:id="@+id/txtDSVC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:padding="20dp"
             android:text="Thêm Chi Tiết Vận Chuyển"
             android:textAlignment="center"
             android:textAllCaps="true"
@@ -40,6 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="20dp"
                 android:padding="10dp"
                 android:text="@string/MaPVC"
                 android:textColor="@color/black"
@@ -50,9 +45,9 @@
                 android:id="@+id/spnMaPVC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:layout_marginHorizontal="15dp"
                 android:background="@drawable/shape_email"
-                android:padding="5dp"
+                android:padding="15dp"
                 android:spinnerMode="dropdown"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/black"
@@ -73,7 +68,7 @@
                 android:id="@+id/spnVT"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
+                android:layout_marginHorizontal="15dp"
                 android:background="@drawable/shape_email"
                 android:padding="15dp"
                 android:spinnerMode="dropdown"
@@ -86,12 +81,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/shape_email"
                 android:drawablePadding="10dp"
                 android:hint="@string/SL"
-                android:padding="15dp"
+                android:padding="10dp"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/black"
                 android:textColorHint="#79000000" />
@@ -101,12 +96,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/shape_email"
                 android:drawablePadding="10dp"
                 android:hint="@string/Cly"
-                android:padding="15dp"
+                android:padding="10dp"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/black"
                 android:textColorHint="#79000000" />
@@ -122,13 +117,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="@color/black"
-                    android:padding="15dp"
+                    android:padding="10dp"
                     android:text="Tạo CT Vận Chuyển"
-                    app:cornerRadius="25dp" />
+                    app:cornerRadius="20dp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

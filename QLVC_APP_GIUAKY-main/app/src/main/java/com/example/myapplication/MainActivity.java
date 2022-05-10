@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 
 import com.google.android.material.card.MaterialCardView;
 
@@ -17,21 +15,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
-        Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up);
-        Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_down);
-        Animation animation3 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoom_in);
-        Animation animation4 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blink);
         cardViewQLVT = findViewById(R.id.cv_qlvt);
-        cardViewQLVT.startAnimation(animation);
         cardViewQLCT = findViewById(R.id.cv_qlct);
-        cardViewQLCT.startAnimation(animation);
         cardViewChuyenVT = findViewById(R.id.cv_chuyenVT);
-        cardViewChuyenVT.startAnimation(animation);
         cardViewCTVC = findViewById(R.id.cv_qlchitiet);
-        cardViewCTVC.startAnimation(animation);
         cardViewThongKe = findViewById(R.id.cv_thongke);
-        cardViewThongKe.startAnimation(animation4);
 
         cardViewQLVT.setOnClickListener(view -> {
             startActivity(new Intent(this, DSVatTuActivity.class));
@@ -54,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
         });
         cardViewThongKe.setOnClickListener(view -> {
-            startActivity(new Intent(this, ThongKeActivity.class));
+            startActivity(new Intent(this, MPLineChart.class));
             overridePendingTransition(R.anim.push_enter, R.anim.push_exit);
         });
         Init_DB();
