@@ -8,8 +8,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -19,13 +17,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-import static androidx.core.content.ContextCompat.startActivity;
 import static com.example.myapplication.ext.ConstExt.POSITION;
 
 public class DSVatTuActivity extends AppCompatActivity {
     private static int REQUEST_CODE = 1;
     DBHelper DBhelper;
-    ImageView btnReturn2;
+//    ImageView btnReturn2;
     ImageView btnUpdate11;
     //lấy dl hiển thị lên listview
     @Override
@@ -35,7 +32,7 @@ public class DSVatTuActivity extends AppCompatActivity {
         // GET THONG TIN VT
         ImageButton imgbtn_addvt = findViewById(R.id.imgbtn_addvt);
         ListView listView = findViewById(R.id.lvDSVT);
-        btnReturn2 = findViewById(R.id.btnReturn2);
+//        btnReturn2 = findViewById(R.id.btnReturn2);
         btnUpdate11 = findViewById(R.id.btnUpdate11);
 
         ArrayList<VatTu> ArrVT = new ArrayList<>();
@@ -84,12 +81,12 @@ public class DSVatTuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        btnReturn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(DSVatTuActivity.this, MainActivity.class));
-            }
-        });
+//        btnReturn2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(DSVatTuActivity.this, MainActivity.class));
+//            }
+//        });
 
 
 

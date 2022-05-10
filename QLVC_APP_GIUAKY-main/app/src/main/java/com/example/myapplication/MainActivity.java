@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 
 import com.google.android.material.card.MaterialCardView;
 
@@ -44,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
         });
         cardViewThongKe.setOnClickListener(view -> {
-            startActivity(new Intent(this, ThongKeActivity.class));
+            startActivity(new Intent(this, MPLineChart.class));
             overridePendingTransition(R.anim.push_enter, R.anim.push_exit);
         });
         Init_DB();

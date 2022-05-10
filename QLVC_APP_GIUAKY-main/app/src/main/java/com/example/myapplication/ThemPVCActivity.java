@@ -28,7 +28,6 @@ import java.util.Date;
 public class ThemPVCActivity extends AppCompatActivity {
     DBHelper DBhelper;
     int selected_position;
-    ImageView btnReturn7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +40,6 @@ public class ThemPVCActivity extends AppCompatActivity {
         EditText edtTT=findViewById(R.id.spnTT);
         Button btnadd = findViewById(R.id.btnTaoPVC);
         Spinner gvspinner = findViewById(R.id.spnCT);
-        btnReturn7 = findViewById(R.id.btnReturn7);
 
         ArrayList<CongTrinh> dsCT = new ArrayList<CongTrinh>();
         Cursor dt = DBhelper.GetData("select * from congtrinh");
@@ -109,12 +107,6 @@ public class ThemPVCActivity extends AppCompatActivity {
                 }
 
 
-            }
-        });
-        btnReturn7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ThemPVCActivity.this, MainActivity.class));
             }
         });
     }

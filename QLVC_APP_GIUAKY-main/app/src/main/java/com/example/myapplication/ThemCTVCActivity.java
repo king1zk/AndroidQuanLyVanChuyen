@@ -12,23 +12,16 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 
 public class ThemCTVCActivity extends AppCompatActivity {
     DBHelper DBhelper;
     int selected_positionPVC, selected_positionVT;
-    ImageView btnReturn6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +35,6 @@ public class ThemCTVCActivity extends AppCompatActivity {
         Button btnadd = findViewById(R.id.btnTaoCTVC);
         Spinner PVCspinner = findViewById(R.id.spnMaPVC);
         Spinner VTspinner = findViewById(R.id.spnVT);
-        btnReturn6 = findViewById(R.id.btnReturn6);
 
         //Spinner danh sách phiếu vận chuyển
         ArrayList<PhieuVanChuyen> dsPVC= new ArrayList<PhieuVanChuyen>();
@@ -116,13 +108,6 @@ public class ThemCTVCActivity extends AppCompatActivity {
                 }
 
 
-            }
-        });
-
-        btnReturn6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ThemCTVCActivity.this, MainActivity.class));
             }
         });
 
